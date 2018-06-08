@@ -1,0 +1,27 @@
+<% include ../header %>
+<div class="container-fluid">
+	<div class="box-superior">
+		<div class="login">
+			<header>
+				<h1 class="display-3">Ntalk</h1>
+				<h4>Bem-vindo!</h4>
+			</header>
+			<section>
+				<div id="alert-nome"  class="alert alert-danger alert-dismissible"> 
+					<button type="button" class="close" data-dismiss="alert">&times;></button>
+					<strong>Está faltando o nome</strong>
+				</div>
+				<div id="alert-email"  class="alert alert-danger alert-dismissible"> 
+					<button type="button" class="close" data-dismiss="alert">&times;></button>
+					<strong>Está faltando o E-mail</strong>
+				</div>
+				<form action="/entrar" method="post">
+					<input type="text" name="usuario[nome]" placeholder="Digite seu nome." class="form-control"><br/>
+					<input type="text" name="usuario[email]" placeholder="Digite seu e-mail." class="form-control"><br/>
+					<button type="submit" class="btn btn-success">Entrar</button>
+				</form>
+			</section>
+		</div>
+	</div>
+</div>
+<% include ../footer %>

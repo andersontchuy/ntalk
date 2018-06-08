@@ -1,0 +1,12 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+	const socket = io.connect('http://192.168.0.108:3000');
+	socket.on('new-message', function(data) {
+		let chat = document.getElementById('chat_'+data.email);
+		chat.href += '?'+data.sala[1];
+
+		console.log('email: '+data.email);
+		console.log('sala: '+data.sala[1]);
+		console.log('chat: '+chat);
+	});
+</script>
